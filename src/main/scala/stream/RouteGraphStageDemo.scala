@@ -123,10 +123,10 @@ object RouteGraphStageDemo extends App {
 
     val squareGraph = builder.add(new SquareGraphStage())
 
-    val cubeGraphStage = builder.add(new CubeGraphStage())
+    val cubeGraph = builder.add(new CubeGraphStage())
 
     routeInlet.out(0) ~> squareGraph ~> out.in(0)
-    routeInlet.out(1) ~> cubeGraphStage ~> out.in(1)
+    routeInlet.out(1) ~> cubeGraph ~> out.in(1)
     FlowShape(routeInlet.in, out.out)
   })
 
